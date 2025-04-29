@@ -43,7 +43,7 @@ boolean isWaterDetected() {                                                     
                                                                                                  //42 
   // Take multiple readings with delays between them                                             //43 Loop three times for readings
   for (int i = 0; i < 3; i++) {                                                                  //44 
-    if (digitalRead(waterLevelPin) > 100) {                                                      //45 100 is our analog threshold
+    if (analogRead(waterLevelPin) > 100) {                                                      //45 100 is our analog threshold
       waterDetectedCount++;                                                                      //46
     }                                                                                            //47 wait between readings (preset to 10 seconds)
     delay(waterDetectionDelay);                                                                  //48
