@@ -59,7 +59,7 @@ void loop() {                                                                   
   // Check water level with debouncing                                                           //58
   boolean waterDetected = isWaterDetected();                                                     //59 This variable is true or false, used in our conditional statement
   Serial.print("Water detected: ");    //THIS IS FOR DEBUGGING                                   //60 used for debugging to serial monitor, anytime you see Serial.print()
-  Serial.println(analogRead(waterLevelPin);     //THIS IS FOR DEBUGGING                                     //61
+  Serial.println(analogRead(waterLevelPin));     //THIS IS FOR DEBUGGING                                     //61
                                                                                                  //62
   if (waterDetected == false) {                                                                  //63 If water IS NOT detected, do the following, if water IS detected, go to the else statement
     Serial.println("Water reservoir is empty! Please refill.");                                  //64
