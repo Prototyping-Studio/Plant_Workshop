@@ -10,7 +10,7 @@ const int moistureSensorPin = A0;                                               
                                                                                                  //09 
 unsigned long checkInterval = 3600000;                                                           //10 time to wait before checking soil moisture - 1 hour (3600000ms)
 int waterPumpTime = 5000;                                                                        //11 how long to run the pump in ms - 5 seconds to provide adequate water
-int moistureThreshold = 320; //Analog Threshhold for values between 0-1023                       //12 threshold below which the plant needs watering (0-1023 scale, lower = drier)
+int moistureThreshold = 400; //Analog Threshhold for values between 0-1023                       //12 threshold below which the plant needs watering (0-1023 scale, lower = drier)
 int waterDetectionDelay = 1000;                                                                  //13 delay between water detection readings in ms
                                                                                                  //14 
                                                                                                  //15
