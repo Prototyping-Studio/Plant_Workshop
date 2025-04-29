@@ -2,7 +2,7 @@
                                                                                                  //01
 const int ledPin = 2;                                                                            //02 Digital output pin that the LED is attached to
 const int pumpPin = 12;                                                                          //03 Digital output pin that the water pump is attached to
-const int waterLevelPin = A3;                                                                     //04 Digital input pin water level sensor is connected to
+const int waterLevelPin = A3;                                                                    //04 Analog input pin water level sensor is connected to
 const int moistureSensorPin = A0;                                                                //05 Analog input pin used to check the moisture level of the soil
                                                                                                  //06
                                                                                                  //07
@@ -43,14 +43,14 @@ boolean isWaterDetected() {                                                     
                                                                                                  //42 
   // Take multiple readings with delays between them                                             //43 Loop three times for readings
   for (int i = 0; i < 3; i++) {                                                                  //44 
-    if (digitalRead(waterLevelPin) > 100) {                                                    //45 HIGH typically means water is detected
+    if (digitalRead(waterLevelPin) > 100) {                                                      //45 100 is our analog threshold
       waterDetectedCount++;                                                                      //46
     }                                                                                            //47 wait between readings (preset to 10 seconds)
     delay(waterDetectionDelay);                                                                  //48
   }                                                                                              //49
                                                                                                  //50
   // Return true if majority of readings detected water                                          //51
-  return (waterDetectedCount > 1);                                                         //52 return true or false based on how many times water was detected
+  return (waterDetectedCount > 1);                                                               //52 return true or false based on how many times water was detected
 }                                                                                                //53
                                                                                                  //54
 void loop() {                                                                                    //55
